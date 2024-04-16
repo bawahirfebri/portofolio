@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1A1A1A;
+  color: #E2F8E0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#root {
+  width: 100vw;
+  display: flex;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 96px;
+}
+
+header {
+  flex: 1;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+header #header__profile #header__profile-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+}
+
+header #header__profile #header__profile-top img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+}
+
+header #header__profile #header__profile-top #header__profile-top-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header #header__profile #header__profile-top #header__profile-top-right h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+header #header__profile #header__profile-top #header__profile-top-right h2 {
+  font-size: 24px;
+  margin: 4px 0 0;
+  font-weight: 300;
+}
+
+header #header__profile p {
+  font-size: 16px;
+  color: #d1d8e1;
+  margin: 16px 0 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+header nav ul li a::before {
+  content: "";
+  height: 8px;
+  width: 16px;
+  background-color: #737E8C;
+  border-radius: 0 4px 4px 0;
+  margin-right: 16px;
+  transition: all ease-in-out 200ms;
+}
+
+header nav ul li a {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  color: #737E8C;
+  text-decoration: none;
+  transition: all ease-in-out 200ms;
+}
+
+header nav ul li a:hover {
+  color: #E2F8E0;
+  transition: all ease-in-out 200ms;
+}
+
+
+header nav ul li a:hover::before {
+  width: 48px;
+  background-color: #E2F8E0;
+  transition: all ease-in-out 200ms;
+}
+
+main {
+  flex: 1;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #d1d8e1;
+  line-height: 1.5;
+}
+
+main #about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.active {
+  color: #E2F8E0;
+  /* padding-left: 24px; */
+}
+
+header nav ul li a.active::before {
+  background-color: #E2F8E0;
+  width: 48px;
+}
